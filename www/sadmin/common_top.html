@@ -1,0 +1,71 @@
+<? require_once($_SERVER[DOCUMENT_ROOT]."$PATH_INFO/sadmin/common_head.html"); ?>
+<?php
+    $left_Div = explode("/",$_SERVER["PHP_SELF"]);
+    $left_DivCnt = count($left_Div);
+    $left_name = $left_Div[$left_DivCnt-1];
+    $left_number = substr($left_name,5,1);
+    $left_number2 = substr($left_name,5,3);
+
+if($left_number=='1'){ 
+    $left_title = "홈페이지 관리";
+}else if($left_number=='2'){
+    $left_title = "게시판관리";
+}else if($left_number=='3'){
+    $left_title = "지원사업";
+}else if($left_number=='4'){
+    $left_title = "청년활동가";
+}
+
+?>
+<body>
+<!-- 탑메뉴부분 시작 -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="595d64">
+  <tr>
+    <td><table width="1100" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="946" height="30" align="right"><font class="T5"><?=$SITE_ADMIN_NAME?>님 환영합니다.</font></td>
+          <td width="154"><div align="right"><a href="<?=$HOME_PATH?>/sadmin/"><img src="img/admin_1.gif" width="23" height="17" border="0" /></a>
+              <a href="<?=$HOME_PATH?>/sadmin/admin1_1_sub1.html?uid=<?=$memberinfo[uid]?>"><img src="img/admin_2.gif" width="54" height="17" border="0"  /></a>
+              <a href="#" ><img src="img/admin_3.gif" alt="" width="54" height="17" border="0"  id="admin_logout"  /></a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="img/admin_6.gif">
+  <tr>
+    <td height="89" style="background-image: url(img/newmain_3.gif); background-repeat:no-repeat; background-position:left top;">
+    <table width="1100" border="0" cellpadding="0" cellspacing="0" background="img/admin_5.gif">
+      <tr>
+        <td width="220" height="30"><a href="<?=$HOME_PATH?>/sadmin/index.html"><img src="img/admin_4.gif" width="220" height="89" border="0" /></a></td>
+        <td width="880" valign="top"><table width="880" border="0" cellspacing="0" cellpadding="0">
+              <tr align=center>
+			    <td></td>
+                <td width="100" height="64" align="right"><a href="admin1_1.html"><b>홈페이지 관리</b></a></td>
+				<td width="100"><a href="admin2_1.html"><b>게시판관리</b></a></td>
+				</td>
+              </tr>
+            </table></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<!-- 탑메뉴부분 끝 -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#admin_logout").css("cursor","pointer");
+		$("#admin_logout").click(function(){
+				$.ajax({
+					type : "POST"
+					, url : "/INC/adminlogin_ajax1.php"
+					, dataType : "JSON"
+					, data : "mode=logout"
+					, success : function(res){
+
+						if(res.code=="1"){
+							location.replace("<?=$PATH_INFO?>/sadmin/admin_login.html");
+						}
+					}
+				});
+		});
+	});
+</script>

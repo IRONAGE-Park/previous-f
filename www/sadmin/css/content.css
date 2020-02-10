@@ -1,0 +1,138 @@
+img{border:0 none}	
+
+/* 스크롤바스타일 */
+BODY {scrollbar-face-color:# #F3F6F3; 
+    scrollbar-shadow-color:# #C2E3E8; 
+    scrollbar-highlight-color:# #C2E3E8; 
+    scrollbar-3dlight-color:# #f0f0f0; 
+    scrollbar-darkshadow-color:# #F3F6F3; 
+    scrollbar-track-color:# #F3F6F3; 
+    scrollbar-arrow-color:# #939395;
+	margin:0;}
+
+/* 링크스타일 */
+a:link 				{color:#212121; font-size:9pt; font-family:돋움; text-decoration:none;}
+a:visited    		{color:#212121; font-size:9pt; font-family:돋움; text-decoration:none;}
+a:active 			{color:#212121; font-size:9pt; font-family:돋움; text-decoration:none;}
+a:hover 			{color:#3487D5; font-size:9pt; font-family:돋움; text-decoration:none;}
+
+/*  링크스타일  */
+a.L1:link 			{color:#ffffff; font-size:9pt; font-family:돋움; text-decoration:none;font-weight:bold;}
+a.L1:visited		{color:#ffffff; font-size:9pt; font-family:돋움; text-decoration:none;font-weight:bold;}
+a.L1:active 		{color:#ffffff; font-size:9pt; font-family:돋움; text-decoration:none;font-weight:bold;}
+a.L1:hover			{color:#ccff99; font-size:9pt; font-family:돋움; text-decoration:none;font-weight:bold;}
+
+a.L2:link 			{color:#666666; font-size:10pt; font-family:돋움; text-decoration:none;font-weight:bold;letter-spacing:-0.1em;margin-left:10px;}
+a.L2:visited		{color:#666666; font-size:10pt; font-family:돋움; text-decoration:none;font-weight:bold;letter-spacing:-0.1em;margin-left:40px;}
+a.L2:active 		{color:#666666; font-size:10pt; font-family:돋움; text-decoration:none;font-weight:bold;letter-spacing:-0.1em;margin-left:40px;}
+a.L2:hover			{color:#339966; font-size:10pt; font-family:돋움; text-decoration:none;font-weight:bold;letter-spacing:-0.1em;margin-left:40px;}
+
+a.L3:link 			{color:#666666; font-size:8.5pt; font-family:돋움; text-decoration:none;margin-left:7px;}
+a.L3:visited		{color:#666666; font-size:8.5pt; font-family:돋움; text-decoration:none;margin-left:7px;}
+a.L3:active 		{color:#666666; font-size:8.5pt; font-family:돋움; text-decoration:none;margin-left:7px;}
+a.L3:hover			{color:#339966; font-size:8.5pt; font-family:돋움; text-decoration:none;margin-left:7px;}
+
+a.L4:link 			{color:#666666; font-size:9pt; font-family:돋움; text-decoration:none;}
+a.L4:visited		{color:#666666; font-size:9pt; font-family:돋움; text-decoration:none;}
+a.L4:active 		{color:#666666; font-size:9pt; font-family:돋움; text-decoration:none;}
+a.L4:hover			{color:#339966; font-size:9pt; font-family:돋움; text-decoration:none;}
+
+a.L5:link 			{color:#ffffff; font-size:9pt; font-family:돋움; text-decoration:none;}
+a.L5:visited		{color:#ffffff; font-size:9pt; font-family:돋움; text-decoration:none;}
+a.L5:active 		{color:#ffffff; font-size:9pt; font-family:돋움; text-decoration:none;}
+a.L5:hover			{color:#ccff99; font-size:9pt; font-family:돋움; text-decoration:none;}
+
+/* TD스타일 */
+ td          {font-size:9pt ; color:#666666  ; line-height : 140% ; font-family:돋움;}
+ 
+ 
+ /* 폼스타일 */
+.FORM1  {border:solid 1px #cccccc;font-size:9pt;color:#555555;background-color:#ffffff;}
+.FORM2  {border:solid 1px #cccccc;font-size:9pt;color:#555555; width:128px; background-image: url(../images/bbs1_31_1.gif); background-repeat: no-repeat;text-align:center;}
+
+select {font-size:9pt;}
+
+/* 테이블스타일 */
+
+.border1 {
+ line-height:150%; padding-top:8px;}
+ 
+ .border2 {
+ line-height:170%; }
+
+ 
+ 
+ /* 텍스트 스타일 */
+.T1       {font-size:18pt;color:#ffffff;letter-spacing:-0.1em;margin-left:10px;}
+.T2       {font-size:14pt;color:#666666;font-weight:bold;letter-spacing:-0.05em;}
+.T3       {font-size:8.5pt;color:#999999;}
+.T4       {font-size:9pt;color:#666666;font-weight:bold;letter-spacing:-0.05em;}
+.T5       {font-size:9pt;color:#cccccc;font-weight:bold;letter-spacing:-0.05em;}
+.T6       {font-size:8.5pt;color:#cccccc;;margin-left:7px;}
+.T7       {font-size:13pt;color:#ffffff;letter-spacing:-0.1em;margin-left:20px;font-weight:bold;}
+
+.T8       {font-size:11pt;color:#ffffff;font-weight:bold;letter-spacing:-0.1em;}
+ 
+ /* 링크라인 없애기 */
+a,area { blr:expression(this.onFocus=this.blur()) }
+:focus { -moz-outline-style: none; }
+
+/* 페이징 */
+.paging-box {
+	/* margin-top: 50px;*/
+  text-align: center;
+  font-size: 0;
+  line-height:23px;
+}
+
+.paging-box ul li {
+ vertical-align:middle;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  _display: inline;
+  margin: 0 3px;
+}
+.paging-box ul li a {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  _display: inline;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #e0e0e0;
+  color: black;
+  font-size: 14px;
+  background-color: white;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.paging-box ul li a.btn-start {
+  background-image: url();
+}
+.paging-box ul li a.btn-prev {
+  background-image: url();
+}
+.paging-box ul li a.btn-next {
+  background-image: url();
+}
+.paging-box ul li a.btn-end {
+  background-image: url();
+}
+.paging-box ul li a img {
+  vertical-align: top;
+}
+.paging-box ul li a:hover,
+.paging-box ul li a.current {
+  background-color: #86aa5d;
+  border-color: #86aa5d;
+  color: white;
+}
+
+#divframe {
+ width:450px;height:250px;overflow-y: scroll; border: 1px solid #e4e4e4;
+}
+
+.hand {
+	cursor:pointer;
+}

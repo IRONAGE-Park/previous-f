@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*common*/
+body,td,th {margin:0; background-color:#fff; background-image: url(../img/bg.gif); background-attachment: scroll; background-repeat: repeat-x; background-position: top left; font-size:14px; font-family: '맑은 고딕', 'MalgunGothic', 'Dotum', 'Gulim', Arial, Helvetica, sans-serif; color:#666;}
+img {border: none}
+ul,ol,li {list-style: none;}
+
+/*link*/
+a {text-decoration: none; color: #666}
+a:hover {text-decoration: underline; color: #000}
+a.main01 {font-size:18px; text-decoration: none; font-weight: bold; color: #333}
+a.main01:hover {font-size:18px; text-decoration: underline; font-weight: bold; color: #000}
+a.main02 {font-size:12px; text-decoration: none; color: #ff6600}
+a.main02:hover {font-size:12px; text-decoration: none; color: #ff6600}
+
+/*form*/
+.select {height:20px; padding-top:2px; padding-left:2px; background-color:#FFF; border:1px solid #CCC; font-size:12px; color:#525252}
+.input {height:20px; padding-top:2px; padding-left:2px; background-color:#FFF; border:1px solid #CCC; font-size:12px; color:#525252}
+.input2 {width:114px; height:16px; padding-top:2px; padding-left:2px; background-color:#000; border:1px solid #444; font-size:12px; color:#CCC}
+.textarea {padding:5px; background-color:#FFF; border:1px solid #CCC; font-size:12px; color:#525252; }
+.textarea2 {width:146px; height:30px; padding:5px; background-color:#000; border:1px solid #444; font-size:12px; color:#CCC}
+.checkbox {width:115px; height:65px; background-color:transparent; border:0px solid}
+.radio {background-color:transparent; border:0px solid}
+.phone_textarea {width:160px; height:80px; padding:3px; background-color:#161616; border:1px solid #646464; font-size:12px; color:#FFF}
+.phone_input {width:120px; height:19px; background-color:#161616; border:1px solid #646464; font-size:12px; color:#FFF}
+.phone_select {width:120px; height:19px; background-color:#161616; border:1px solid #646464; font-size:12px; color:#FFF}
+
+/*text*/
+.f11 {font-size: 11px}
+.f16 {font-size: 16px}
+
+
+/*gnb*/
+.gnb {margin:0 auto; width: 1100px; height:170px;}
+
+/*visual*/
+.visual {width: 100%; height: 480px; background-image: url(../img/main/main01.jpg); background-position:top center}
+
+/*new*/
+.new {margin:0 auto; width: 1100px; height: 726px;}
+
+/*portfolio*/
+.portfolio {width: 100%; height: 450px; background-color: #f4f4f4;}
+.portfolio-in{margin: 0 auto; width: 1100px}
+
+.footer {width:100%; padding: 60 0; background-color: #281a18}
+.footer-in {margin: 0 auto; width: 1100px}
+.footer_f01 {font-size: 13px; font-weight: bold; color: #999}
+.footer_f02 {font-size: 12px; color: #645a58}
+

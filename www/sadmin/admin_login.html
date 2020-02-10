@@ -1,0 +1,97 @@
+<?php
+ require_once("../include/header.php");
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><?=$SiteName?> 관리자</title>
+<link rel="stylesheet" href="<?=$PATH_INFO?>/sadmin/css/content.css">
+<script type="text/javascript" src="<?=$PATH_INFO?>/js/head.js"></script>
+<script  type="text/javascript" src="<?=$PATH_INFO?>/ckeditor/ckeditor.js"></script>
+</head>
+
+<body background="img/admin_40.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+	<br><br><br><br><br><br><br><br><br><br>
+	<table width="990" height="330" border="0" align="center" cellpadding="0" cellspacing="0" background="img/admin_41.gif">
+        <tr> 
+          <td width="572">&nbsp;</td>
+          <td width="418"><br />
+            <br />
+            <br />
+            <table width="341" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="181" height="30" valign="top"><input name="GetId"  tabindex=1 type="text" style="width:150px" class="FORM1"  /></td>
+                <td width="160" rowspan="2"><input type="image" src="img/admin_42.gif" width="100" height="61" border="0" tabindex=3  id="loginSubmit"  /></a></td>
+              </tr>
+              <tr> 
+                <td valign="bottom"><input name="GetPw" type="password" style="width:150px" class="FORM1" tabindex=2  /></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>
+<script type="text/javascript"> 
+	$(document).ready(function(){
+		$("#loginSubmit").css("cursor","pointer");
+
+		$("#loginSubmit").click(function(){
+			loginProcess();
+		});
+
+		$('.wrap').on('keypress', function(e) {
+			if (e.which == 13) {/* 13 == enter key@ascii */
+				//alert("you pressed enter key");
+				loginProcess();
+			}
+		});
+
+		loginProcess=function(){
+			var v1 = $('input[name="GetId"]').val();
+			var v2 = $('input[name="GetPw"]').val();
+			var v3 = $(":input:radio[name=mtype]:checked").val()
+
+				if(!v1){
+					alert ("아이디를 입력해주세요.");
+					return false;
+				}
+				if(!v2){
+					alert ("비밀번호를 입력해주세요.");
+					return false;
+				}
+
+				$.ajax({ 
+					type : "POST"
+					, url : "/INC/adminlogin_ajax1.php"
+					, dataType : "JSON"
+					, data : "mode=login&session_id=<?=$_SESSION[Session_ID] ?>&v1="+v1+"&v2="+v2+"&mtype="+v3
+					, success : function(res){ 
+						if(res.code!="0"){
+							location.href ="/sadmin/index.html";
+							/*
+							if(res.code!="20"){
+								//alert ("로그인 되었습니다.");
+								location.href ="/sadmin/index.html";
+							}else{
+								alert ("다른 곳에서 로그인중 입니다.");
+								return false;
+							}*/
+
+							//return false;
+
+						}else{
+							alert ("입력하신 아이디 또는 비밀번호가 잘못 되었습니다.");
+							return false;
+						}
+					}
+				});
+		}
+
+	});
+</script>
